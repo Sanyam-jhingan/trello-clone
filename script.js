@@ -1,4 +1,4 @@
-//require('dotenv').config()
+require('dotenv').config()
 
 boardID = process.env.BOARD_ID
 apiKey = process.env.API_KEY
