@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+  background-repeat: no-repeat;
+}
+
+input,
+button,
+textarea {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  min-height: 10px;
+}
+
+section {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lists-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 32px;
+  gap: 10px;
+}
+
+.reveal-input {
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  padding: 8px;
+  width: 255px;
+  text-align: left;
+  color: white;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.reveal-card-input {
+  font-size: 16px;
+  height: fit-content;
+  padding: 8px;
+  width: 255px;
+  text-align: left;
+  color: #838da0;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.reveal-input:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.reveal-card-input:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.add-list-form {
+  display: none;
+  flex-direction: column;
+  width: 272px;
+  padding: 4px 4px;
+  height: fit-content;
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.add-card-form {
+  display: none;
+  flex-direction: column;
+  height: fit-content;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 1);
+  margin: 8px 0;
+  padding: 8px 4px;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 15px;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.add-list-form input {
+  padding: 8px 12px;
+  background-color: white;
+  /* border: 1px solid #0079bf; */
+  border-radius: 3px;
+  color: #172b4d;
+  margin: 4px 0;
+  width: 100%;
+}
+
+input {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+textarea {
+  padding: 8px 12px;
+  background-color: white;
+  /* border: 1px solid #0079bf; */
+  border-radius: 3px;
+  color: #172b4d;
+  margin: 4px 0;
+  width: 100%;
+}
+
+.add-list-form input:focus,
+.add-list-form input:hover,
+textarea:focus,
+textarea:hover {
+  border: 1px solid #0079bf;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: gray;
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-btn {
+  min-height: 32px;
+  padding: 4px 8px;
+  background-color: rgba(0, 121, 191, 0.8);
+  color: white;
+  margin: 8px 4px 0 0;
+  border-radius: 3px;
+}
+
+.input-btn:hover {
+  background-color: rgba(0, 121, 191, 1);
+}
+
+.delete-btn,
+.delete-card-btn,
+.delete-list-btn,
+.desc-close-btn {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  height: 32px;
+  width: 32px;
+  color: #808a9e;
+}
+
+.delete-btn:hover,
+.delete-card-btn:hover,
+.delete-list-btn:hover,
+.desc-close-btn:hover {
+  color: black;
+}
+
+.desc-close-btn {
+  text-align:center;
+}
+
+.custom-lists {
+  display: flex;
+  gap: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+  height: fit-content;
+  padding: 4px 8px;
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+li {
+  display: flex;
+}
+
+:is(li:hover) .del-card-btn {
+  color: black;
+}
+:is(li:hover) .edit-card-btn {
+  visibility: visible;
+}
+
+.card-btn {
+  flex: 1 1 0%;
+  text-align: left;
+  font-weight: 400;
+}
+
+.del-card-btn {
+  color: white;
+  width: 25px;
+  padding-bottom: 5px;
+}
+
+/* .del-card-btn:hover {
+  color: black;
+} */
+
+.edit-card-btn {
+  width: 15px;
+  visibility: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.header {
+  font-weight: 700;
+  padding: 4px 0;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  background-color: #f4f5f7;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; 
+  min-height: 75%;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.model-heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.heading-wrapper {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.description-heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.desc-edit {
+  display: none;
+  background-color: #eaecef;
+  padding: 6px 12px;
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+.desc-edit:hover {
+  background-color: #091e4214;
+}
+
+.desc-input {
+  background-color: #eaecef;
+}
+
+.desc-input::placeholder {
+  color: black;
+}
+
+.activity-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.activity-input {
+  min-height: 32px;
+  padding: 4px 8px;
+  cursor: text;
+  background-color: white;
+  margin: 8px 4px 0 0;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.activity-input:hover {
+  border: 1px solid #0079bf;
+}
+
+.add-activity-form {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.btn-wrapper {
+  display: none;
+  margin: 10px 0;
+}
+
+.desc-save-btn, .activity-save-btn {
+  background-color: #026aa7;
+  color: white;
+  margin: 0 4px 0 0;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+.activity-save-btn {
+  width: fit-content;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.activity-list input {
+  box-shadow: none;
+  border: 1px solid #eaecef;
+}
+
+.activity-list input:hover {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #eaecef;
+  pointer-events: none;
+  }
+
+.edit-comment-btn, .delete-comment-btn {
+  color: #5e6c84;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: underline;
+  margin: 0 5px 15px 5px;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trello</title>
+  </head>
+  <body>
+    <section id="lists">
+      <div class="lists-container">
+        <button class="reveal-input" type="button">+ Add another list</button>
+        <form class="add-list-form">
+          <input
+            class="input add-list-input"
+            type="text"
+            value=""
+            placeholder="Enter list title..."
+          />
+          <div class="buttons">
+            <button type="submit" class="input-btn">Add list</button>
+            <button class="delete-list-btn">X</button>
+          </div>
+        </form>
+        <div class="custom-lists"></div>
+    </section>
+  </body>
+  <script src="./script.js"></script>
+</html>
+
+<!-- <script data-main="scripts/script" src="scripts/require.js"></script> -->

@@ -1,0 +1,17 @@
+{
+  "name": "trello_dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "raphael": "^2.3.0",
+    "require": "^2.4.20"
+  }
+}
