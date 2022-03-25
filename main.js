@@ -887,7 +887,7 @@ module.exports = DotenvModule
 (function (process){(function (){
 require('dotenv').config()
 
-boardID = process.env.BOARD_ID
+boardID = parse(process.env.BOARD_ID)
 apiKey = process.env.API_KEY
 token = process.env.TOKEN
 
