@@ -1,8 +1,8 @@
-require('dotenv').config()
+//require('dotenv').config()
 
-boardID = process.env.BOARD_ID
-apiKey = process.env.API_KEY
-token = process.env.TOKEN
+boardID = "5b43ce6a4b30a543dc4460e8"
+apiKey = "c72758c21ba487670d2dec9b116967a1"
+token = "67d71ca2e6eb6ffbf3f0f32c1d5afc5a3df2525f0f136e1ada7ca0849ce0fec8"
 
 //const addListForm = document.querySelector(".add-list-form")
 const addListInput = document.querySelector(".add-list-input")
