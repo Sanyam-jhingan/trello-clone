@@ -403,6 +403,3 @@ li {
   margin: 0 5px 15px 5px;
 }
 
-.dragging {
-  transform: rotate(5deg);
-}
